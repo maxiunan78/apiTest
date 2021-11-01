@@ -17,7 +17,8 @@ def md5_key(arg):
 def get_signStr(sortedData,app_key):
     result = ''
     for key,val in sortedData.items():
-        result = result + key +val
+        if val != '':
+            result = result + key +val
     # print("result:"+ result)
     sinStr = app_key + result + app_key
     print(sinStr)
