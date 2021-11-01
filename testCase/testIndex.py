@@ -11,19 +11,19 @@ class Api(unittest.TestCase):
         self.assertEqual(r.json()['code'],200)
         self.assertEqual(r.status_code,200)
 
-    def test_api_001(self):
-        """登录系统"""
-        url = 'https://uat-new-hybman.jhjbxj.com/user/login'
-        data = {
-            "channelCode":"JHJHOME",
-            "passport":"admin",
-            "passwd":"e3ceb5881a0a1fdaad01296d7554868d"
-        }
-        req = RequestHandler()
-        login_res = req.visit("post",url,data=data)
-        self.statusCode(r=login_res)
-        with open('token','w') as f:
-            f.write(login_res.json()['data']['token'])
+    # def test_api_001(self):
+    #     """登录系统"""
+    #     url = 'https://uat-new-hybman.jhjbxj.com/user/login'
+    #     data = {
+    #         "channelCode":"JHJHOME",
+    #         "passport":"admin",
+    #         "passwd":"e3ceb5881a0a1fdaad01296d7554868d"
+    #     }
+    #     req = RequestHandler()
+    #     login_res = req.visit("post",url,data=data)
+    #     self.statusCode(r=login_res)
+    #     with open('token','w') as f:
+    #         f.write(login_res.json()['data']['token'])
 
     def getToken(self):
         """读取token文件内容"""

@@ -18,10 +18,10 @@ def get_signStr(sortedData,app_key):
     result = ''
     for key,val in sortedData.items():
         if val != '':
-            result = result + key +val
+            result = result + key +str(val)
     # print("result:"+ result)
     sinStr = app_key + result + app_key
-    print(sinStr)
+    # print(sinStr)
     return sinStr
 
 #
