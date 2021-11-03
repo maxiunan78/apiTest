@@ -23,12 +23,12 @@ class DbHandler:
         else:
             return  self.cursor.fetchall()
 
-    def clse(self):
+    def close(self):
         self.cursor.close()
         self.conn.close()
 
 if __name__=="__main__":
-    db = DbHandler(host='',port='',user='',password='',database='',charset='utf8')
+    db = DbHandler(host='121.37.164.65',port=3306,user='root',password='rain1q2w3e4r5t',database='cvs',charset='utf8')
     sql = 'select * from user limit 1;'
     data = db.query(sql)
     print(data)
