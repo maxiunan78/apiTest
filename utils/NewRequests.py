@@ -84,16 +84,16 @@ if __name__ == '__main__':
             "fpNo": "1",
             "prId":"2",
             "prName":"93#汽油",
-            "price":7.5,
-            "vol":3,
-            "receivableAmount":60,
-            "discountAmount":5,
-            "realincomeAmount":55,
-            "memberDiscounts":1,
-            "couponDiscounts":3,
+            "price":"7.5",
+            "vol":"3",
+            "receivableAmount":"60",
+            "discountAmount":"5",
+            "realincomeAmount":"55",
+            "memberDiscounts":"1",
+            "couponDiscounts":"3",
             "activityDiscounts":1,
             "thirdMemberId":"42342423",
-            "yzgMemberId":"64190",
+            "yzgMemberId":"64190"
 
         }
 
