@@ -16,12 +16,17 @@ class DbHandler:
 
 
     def query(self,sql,args=None,one=True):
-        self.cursor.execute(sql,args)
+        numbers = self.cursor.execute(sql,args)
+        # print(numbers)
         self.conn.commit()
         if one:
             return self.cursor.fetchone()
         else:
             return  self.cursor.fetchall()
+
+    def showResult(self,datalist):
+        for data in datalist:
+            print(data)
 
     def close(self):
         self.cursor.close()
@@ -29,6 +34,7 @@ class DbHandler:
 
 if __name__=="__main__":
     db = DbHandler(host='121.37.164.65',port=3306,user='root',password='rain1q2w3e4r5t',database='cvs',charset='utf8')
-    sql = 'select * from user limit 1;'
-    data = db.query(sql)
-    print(data)
+    sql = 'select * from provider_info limit 1;'
+    datalist = db.query(sql,one=False)
+    db.showResult(datalist=datalist)
+
